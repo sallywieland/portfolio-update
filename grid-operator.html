@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regional Grid Operator — Sally Wieland</title>
+  <title>MISO Mobile — Sally Wieland</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ── Tokens ── */
     :root {
-      --bg:         #F7F6F3;
-      --ink:        #1A1A1A;
-      --ink-mid:    #5A5753;
-      --ink-light:  #9C9890;
-      --rule:       #E2E0DC;
-      --accent:     #2251CC;
-      --white:      #FFFFFF;
-
-      --serif:      'DM Serif Display', Georgia, serif;
-      --sans:       'Inter', system-ui, sans-serif;
-
-      --max:        1080px;
-      --gutter:     clamp(24px, 5vw, 80px);
+      --bg:        #F7F6F3;
+      --ink:       #1A1A1A;
+      --ink-mid:   #5A5753;
+      --ink-light: #9C9890;
+      --rule:      #E2E0DC;
+      --accent:    #2251CC;
+      --white:     #FFFFFF;
+      --serif:     'DM Serif Display', Georgia, serif;
+      --sans:      'Inter', system-ui, sans-serif;
+      --max:       1080px;
+      --gutter:    clamp(24px, 5vw, 80px);
     }
 
-    /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; }
 
@@ -48,390 +44,250 @@
       justify-content: space-between;
       align-items: baseline;
     }
-
     .nav-name {
-      font-family: var(--sans);
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--ink-mid);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.15s;
+      font-size: 13px; color: var(--ink-mid); text-decoration: none;
+      letter-spacing: 0.02em; transition: color 0.15s;
     }
-
     .nav-links a:hover { color: var(--ink); }
 
-    /* ── Case study hero ── */
+    /* ── Hero ── */
     .cs-hero {
-      padding: clamp(64px, 10vw, 120px) var(--gutter) clamp(72px, 10vw, 112px);
+      padding: clamp(64px, 10vw, 120px) var(--gutter) clamp(56px, 8vw, 96px);
       max-width: var(--max);
       margin: 0 auto;
     }
-
     .cs-eyebrow {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 28px;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 28px;
     }
-
     .cs-headline {
       font-family: var(--serif);
       font-size: clamp(38px, 5.5vw, 66px);
-      line-height: 1.08;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      max-width: 760px;
-      margin-bottom: 36px;
+      line-height: 1.08; letter-spacing: -0.01em;
+      color: var(--ink); max-width: 800px; margin-bottom: 32px;
     }
-
-    .cs-headline em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
+    .cs-headline em { font-style: italic; color: var(--accent); }
     .cs-summary {
-      font-size: clamp(15px, 1.6vw, 17px);
-      line-height: 1.75;
-      color: var(--ink-mid);
-      max-width: 560px;
-      margin-bottom: 52px;
+      font-size: clamp(15px, 1.6vw, 17px); line-height: 1.75;
+      color: var(--ink-mid); max-width: 560px; margin-bottom: 52px;
     }
 
-    /* ── Project meta strip ── */
+    /* ── Meta strip ── */
     .cs-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
+      display: flex; flex-wrap: wrap;
+      border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
     }
-
-    .cs-meta-item {
-      padding: 20px 0;
-      flex: 1 1 160px;
-    }
-
+    .cs-meta-item { padding: 20px 0; flex: 1 1 160px; }
     .cs-meta-item + .cs-meta-item {
-      border-left: 1px solid var(--rule);
-      padding-left: 28px;
-      margin-left: 0;
+      border-left: 1px solid var(--rule); padding-left: 28px;
     }
-
     .cs-meta-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 6px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ink-light); margin-bottom: 6px;
     }
+    .cs-meta-value { font-size: 14px; color: var(--ink-mid); line-height: 1.4; }
 
-    .cs-meta-value {
-      font-size: 14px;
-      color: var(--ink-mid);
-      line-height: 1.4;
-    }
-
-    /* ── Section shared ── */
+    /* ── Shared section ── */
     .cs-section {
-      max-width: var(--max);
-      margin: 0 auto;
+      max-width: var(--max); margin: 0 auto;
       padding: clamp(64px, 9vw, 112px) var(--gutter);
       border-top: 1px solid var(--rule);
     }
-
     .section-eyebrow {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 20px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--ink-light); margin-bottom: 20px;
     }
-
     .section-headline {
       font-family: var(--serif);
       font-size: clamp(26px, 3vw, 38px);
-      line-height: 1.15;
-      color: var(--ink);
-      max-width: 640px;
-      margin-bottom: 28px;
+      line-height: 1.15; color: var(--ink); max-width: 640px; margin-bottom: 28px;
     }
-
-    .section-headline em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
+    .section-headline em { font-style: italic; color: var(--accent); }
     .body-text {
-      font-size: 15px;
-      line-height: 1.8;
-      color: var(--ink-mid);
-      max-width: 640px;
+      font-size: 15px; line-height: 1.8; color: var(--ink-mid); max-width: 600px;
     }
-
-    .body-text + .body-text {
-      margin-top: 16px;
-    }
-
+    .body-text + .body-text { margin-top: 16px; }
     .body-text em {
-      font-style: italic;
-      color: var(--ink);
-      font-family: var(--serif);
-      font-size: 16px;
+      font-style: italic; color: var(--ink);
+      font-family: var(--serif); font-size: 16px;
     }
 
-    /* ── Scale stats ── */
-    .scale-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-      margin-top: 52px;
-    }
-
-    .scale-item {
-      background: var(--bg);
-      padding: 32px 28px;
-    }
-
-    .scale-number {
-      font-family: var(--serif);
-      font-size: clamp(28px, 3.5vw, 42px);
-      color: var(--ink);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .scale-label {
-      font-size: 13px;
-      color: var(--ink-mid);
-      line-height: 1.5;
-    }
-
-    /* ── Challenge / two-col ── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 96px);
-      align-items: start;
-      margin-top: 48px;
-    }
-
-    .two-col-single {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 96px);
-      align-items: start;
-    }
-
-    /* ── Constraints list ── */
-    .constraint-list {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0;
-    }
-
-    .constraint-item {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .constraint-item:first-child { border-top: 1px solid var(--rule); }
-
-    .constraint-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-
-    .constraint-text {
-      font-size: 14px;
-      line-height: 1.65;
-      color: var(--ink-mid);
-    }
-
-    /* ── Screenshot ── */
-    .cs-image-block {
-      max-width: var(--max);
-      margin: 0 auto;
+    /* ── Hero image ── */
+    .cs-image-full {
+      max-width: var(--max); margin: 0 auto;
       padding: 0 var(--gutter) clamp(64px, 9vw, 112px);
     }
-
-    .cs-image-wrap {
-      border: 1px solid var(--rule);
-      border-radius: 8px;
-      overflow: hidden;
-      background: #1a1a2e;
+    .cs-image-full img {
+      display: block; width: 100%; height: auto;
+      border: 1px solid var(--rule); border-radius: 4px;
     }
 
-    .cs-image-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
+    /* ── Stats grid ── */
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--rule);
+      border: 1px solid var(--rule); margin-top: 56px;
     }
-
-    .cs-image-caption {
-      margin-top: 16px;
-      font-size: 12px;
-      color: var(--ink-light);
-      text-align: center;
-      letter-spacing: 0.02em;
-    }
-
-    /* ── Decisions ── */
-    .decision-list {
-      margin-top: 48px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .decision-item {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: clamp(24px, 4vw, 64px);
-      padding: 32px 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .decision-item:first-child { border-top: 1px solid var(--rule); }
-
-    .decision-title {
+    .stat-item { background: var(--bg); padding: 32px 28px; }
+    .stat-number {
       font-family: var(--serif);
-      font-size: 18px;
-      color: var(--ink);
-      line-height: 1.3;
+      font-size: clamp(28px, 3.5vw, 44px);
+      color: var(--ink); line-height: 1; margin-bottom: 8px;
+    }
+    .stat-label { font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
+
+    /* ── Two col ── */
+    .two-col {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 96px); align-items: start;
+    }
+    .two-col-reverse { direction: rtl; }
+    .two-col-reverse > * { direction: ltr; }
+
+    /* ── Constraint list ── */
+    .constraint-list { display: flex; flex-direction: column; }
+    .constraint-item { padding: 20px 0; border-bottom: 1px solid var(--rule); }
+    .constraint-item:first-child { border-top: 1px solid var(--rule); }
+    .constraint-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .constraint-text { font-size: 14px; line-height: 1.65; color: var(--ink-mid); }
+
+    /* ── Phone mockup grid ── */
+    .phone-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 56px;
+    }
+    .phone-frame {
+      border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+      background: var(--white);
+    }
+    .phone-frame img { display: block; width: 100%; height: auto; }
+    .phone-caption {
+      font-size: 12px; color: var(--ink-light);
+      padding: 12px 16px; border-top: 1px solid var(--rule);
     }
 
-    .decision-title em {
-      font-style: italic;
-      color: var(--accent);
+    /* ── Before/after map ── */
+    .map-compare {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; margin-top: 56px; align-items: start;
+    }
+    .map-compare-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-light);
+      margin-bottom: 12px;
+    }
+    .map-compare-img {
+      border: 1px solid var(--rule); border-radius: 4px; overflow: hidden;
+    }
+    .map-compare-img img { display: block; width: 100%; height: auto; }
+    .map-compare-note {
+      font-size: 13px; color: var(--ink-mid); line-height: 1.6; margin-top: 12px;
     }
 
-    .decision-body {
-      font-size: 14px;
-      line-height: 1.75;
-      color: var(--ink-mid);
+    /* ── Browser chrome mockup ── */
+    .browser-chrome {
+      border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
     }
+    .browser-bar {
+      background: #F0EFED; border-bottom: 1px solid var(--rule);
+      padding: 8px 12px; display: flex; align-items: center; gap: 8px;
+    }
+    .browser-dots { display: flex; gap: 5px; }
+    .browser-dot {
+      width: 10px; height: 10px; border-radius: 50%; background: var(--rule);
+    }
+    .browser-url {
+      flex: 1; background: var(--white); border: 1px solid var(--rule);
+      border-radius: 4px; padding: 3px 10px;
+      font-size: 11px; color: var(--ink-light); font-family: var(--sans);
+    }
+    .browser-chrome img { display: block; width: 100%; height: auto; }
+
+    /* ── Decision list ── */
+    .decision-list { margin-top: 48px; }
+    .decision-item {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: clamp(24px, 4vw, 64px);
+      padding: 32px 0; border-bottom: 1px solid var(--rule);
+    }
+    .decision-item:first-child { border-top: 1px solid var(--rule); }
+    .decision-title {
+      font-family: var(--serif); font-size: 18px;
+      color: var(--ink); line-height: 1.3;
+    }
+    .decision-title em { font-style: italic; color: var(--accent); }
+    .decision-body { font-size: 14px; line-height: 1.75; color: var(--ink-mid); }
+
+    /* ── Outcome ── */
+    .outcome-strip {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--rule);
+      border: 1px solid var(--rule); margin-top: 56px;
+    }
+    .outcome-item { background: var(--bg); padding: 40px 36px; }
+    .outcome-number {
+      font-family: var(--serif); font-size: 48px;
+      color: var(--ink); line-height: 1; margin-bottom: 8px;
+    }
+    .outcome-label { font-size: 14px; color: var(--ink-mid); line-height: 1.5; }
 
     /* ── Contact ── */
     .contact {
       border-top: 1px solid var(--rule);
-      max-width: var(--max);
-      margin: 0 auto;
+      max-width: var(--max); margin: 0 auto;
       padding: clamp(56px, 8vw, 96px) var(--gutter);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 40px;
+      display: flex; justify-content: space-between;
+      align-items: flex-end; flex-wrap: wrap; gap: 40px;
     }
-
     .contact-eyebrow {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 16px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--ink-light); margin-bottom: 16px;
     }
-
     .contact-headline {
-      font-family: var(--serif);
-      font-size: clamp(28px, 4vw, 48px);
-      line-height: 1.1;
-      color: var(--ink);
-      max-width: 480px;
+      font-family: var(--serif); font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.1; color: var(--ink); max-width: 480px;
     }
-
-    .contact-headline em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
+    .contact-headline em { font-style: italic; color: var(--accent); }
     .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-end;
+      display: flex; flex-direction: column; gap: 12px; align-items: flex-end;
     }
-
     .contact-link {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.15s;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+      display: flex; align-items: center; gap: 8px; transition: color 0.15s;
     }
-
     .contact-link:hover { color: var(--accent); }
-
-    .contact-link::after {
-      content: '↗';
-      font-size: 11px;
-      color: var(--ink-light);
-    }
+    .contact-link::after { content: '↗'; font-size: 11px; color: var(--ink-light); }
 
     /* ── Footer ── */
     .site-footer {
-      padding: 24px var(--gutter);
-      max-width: var(--max);
-      margin: 0 auto;
+      padding: 24px var(--gutter); max-width: var(--max); margin: 0 auto;
       border-top: 1px solid var(--rule);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 8px;
     }
-
-    .footer-copy {
-      font-size: 12px;
-      color: var(--ink-light);
-    }
-
-    .footer-built {
-      font-size: 12px;
-      color: var(--ink-light);
-    }
+    .footer-copy, .footer-built { font-size: 12px; color: var(--ink-light); }
 
     /* ── Responsive ── */
     @media (max-width: 700px) {
-      .scale-grid { grid-template-columns: 1fr 1fr; }
       .two-col { grid-template-columns: 1fr; }
-      .two-col-single { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .phone-grid { grid-template-columns: 1fr 1fr; }
+      .map-compare { grid-template-columns: 1fr; }
       .decision-item { grid-template-columns: 1fr; gap: 12px; }
+      .outcome-strip { grid-template-columns: 1fr; }
       .contact { flex-direction: column; align-items: flex-start; }
       .contact-links { align-items: flex-start; }
-      nav { flex-direction: column; gap: 16px; }
       .cs-meta-item + .cs-meta-item { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); }
+      nav { flex-direction: column; gap: 16px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -441,7 +297,6 @@
 </head>
 <body>
 
-  <!-- Nav -->
   <nav>
     <a class="nav-name" href="/">Sally Wieland</a>
     <ul class="nav-links">
@@ -454,142 +309,203 @@
   <section class="cs-hero">
     <p class="cs-eyebrow">Case Study · Native App · Energy Infrastructure</p>
     <h1 class="cs-headline">
-      Real-time data for a grid that never <em>stops</em>.
+      Designing for a system that <em>already existed</em>.
     </h1>
     <p class="cs-summary">
-      A regional grid operator serving 42 million people needed a native mobile app for operators and market participants to monitor real-time grid conditions. 303,800 data points. Updates every 5 seconds. The margin for confusion is zero.
+      MISO had 20 years of desktop tools, an established brand, and a user base of energy professionals who knew their domain cold. The challenge wasn't to reimagine — it was to adapt without disrupting what already worked.
     </p>
-
     <div class="cs-meta">
       <div class="cs-meta-item">
         <p class="cs-meta-label">Client</p>
-        <p class="cs-meta-value">Regional grid operator (confidential)</p>
+        <p class="cs-meta-value">Midcontinent Independent System Operator (MISO)</p>
       </div>
       <div class="cs-meta-item">
         <p class="cs-meta-label">Platform</p>
-        <p class="cs-meta-value">Native mobile (iOS + Android)</p>
+        <p class="cs-meta-value">Native iOS + Android</p>
       </div>
       <div class="cs-meta-item">
         <p class="cs-meta-label">Role</p>
-        <p class="cs-meta-value">Sole designer, start to handoff</p>
+        <p class="cs-meta-value">Sole designer, greenfield to App Store</p>
       </div>
       <div class="cs-meta-item">
-        <p class="cs-meta-label">Market scale</p>
-        <p class="cs-meta-value">~$2B settled per month</p>
+        <p class="cs-meta-label">Outcome</p>
+        <p class="cs-meta-value">5.0 App Store · led to misoenergy.org redesign</p>
       </div>
     </div>
   </section>
 
-  <!-- Screenshot -->
-  <div class="cs-image-block">
-    <div class="cs-image-wrap">
-      <img src="assets/grid-operator-mobile.jpg" alt="Regional grid operator mobile app screens showing generation fuel mix, real-time LMP, and ACE charts" />
-    </div>
-    <p class="cs-image-caption">Real-time displays: generation fuel mix, locational marginal pricing, ACE charts, ancillary market, schedule interface.</p>
-  </div>
-
-  <!-- The problem -->
-  <section class="cs-section">
-    <div class="two-col-single">
-      <div>
-        <p class="section-eyebrow">The problem</p>
-        <h2 class="section-headline">
-          Critical infrastructure. A 5-second refresh cycle. No room to <em>misread</em> anything.
-        </h2>
-      </div>
-      <div>
-        <p class="body-text">
-          The operator's public data system publishes over 300,000 data points updated every 5 seconds across 15 states. Their existing tooling was desktop-only, built for control rooms. Market participants needed the same situational awareness on the floor, in the field, on the go.
-        </p>
-        <p class="body-text">
-          This meant dense data displays that had to work at a glance, in adverse conditions, without ambiguity. No sparklines-as-decoration. No hiding complexity. Just making it legible.
-        </p>
-      </div>
-    </div>
-
-    <div class="scale-grid">
-      <div class="scale-item">
-        <p class="scale-number">42M</p>
-        <p class="scale-label">People served across 15 states + Manitoba</p>
-      </div>
-      <div class="scale-item">
-        <p class="scale-number">303,800</p>
-        <p class="scale-label">Data points in the public system</p>
-      </div>
-      <div class="scale-item">
-        <p class="scale-number">5 sec</p>
-        <p class="scale-label">Real-time data refresh interval</p>
-      </div>
-      <div class="scale-item">
-        <p class="scale-number">$2B</p>
-        <p class="scale-label">Wholesale market settled per month</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Constraints -->
+  <!-- Context -->
   <section class="cs-section">
     <div class="two-col">
       <div>
-        <p class="section-eyebrow">Constraints</p>
+        <p class="section-eyebrow">The context</p>
         <h2 class="section-headline">
-          The hard parts were the <em>interesting</em> parts.
+          First project with a client who runs the grid for <em>42 million people</em>.
         </h2>
+      </div>
+      <div>
         <p class="body-text">
-          Energy infrastructure design isn't a visual problem. The visual layer is the last 10%. The first 90% is understanding what a transmission operator actually needs at 2am when an event occurs, and what a market participant needs on the trading floor when LMPs spike.
+          MISO manages the transmission of electricity across 15 states and Manitoba — roughly 186,000 MW of market capacity, 72,000 miles of transmission lines, and a wholesale market that settles around $2 billion a month. Their existing tools were desktop-only, built for control rooms, and deeply embedded in how their users worked.
+        </p>
+        <p class="body-text">
+          This was Crafted's first project with MISO — a greenfield native app, but not a blank slate. The brand, the data structures, the domain vocabulary: all of it already existed. The job was to extend the system into a new context, not replace it.
         </p>
       </div>
-      <div class="constraint-list">
-        <div class="constraint-item">
-          <p class="constraint-label">Data density</p>
-          <p class="constraint-text">Charts needed to convey meaningful signal at small sizes on mobile, without simplifying to the point of uselessness. Every chart element had to earn its space.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-item">
+        <p class="stat-number">42M</p>
+        <p class="stat-label">People served across 15 states + Manitoba</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-number">5 sec</p>
+        <p class="stat-label">Real-time data refresh interval</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-number">$2B</p>
+        <p class="stat-label">Wholesale market settled per month</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-number">303,800</p>
+        <p class="stat-label">Data points in the public system</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The dual audience problem -->
+  <section class="cs-section">
+    <div class="two-col">
+      <div>
+        <p class="section-eyebrow">The challenge</p>
+        <h2 class="section-headline">
+          Same data. New context. <em>No blank slate.</em>
+        </h2>
+        <p class="body-text">
+          The desktop tools had deep information density — grids, charts, maps with dozens of labeled data points. Bringing that to mobile meant working within every constraint at once: screen size, touch targets, connection speeds, and an audience that had been using the desktop version for years.
+        </p>
+        <p class="body-text">
+          The solution wasn't to simplify the data — it was to make it configurable. A Dashboard Settings screen lets users toggle modules on or off and drag to reorder. The app adapts to each person's workflow without changing what the system actually contains.
+        </p>
+      </div>
+      <div>
+        <div class="phone-frame">
+          <img src="/assets/miso-dashboard-settings.png" alt="MISO Mobile Dashboard Settings screen showing toggle and reorder controls" />
+          <p class="phone-caption">Dashboard Settings — toggle visibility, drag to reorder</p>
         </div>
-        <div class="constraint-item">
-          <p class="constraint-label">Real-time refresh</p>
-          <p class="constraint-text">5-second updates across dozens of data series. The UI had to update without disorienting the user. Values change; context shouldn't flicker.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map decision -->
+  <section class="cs-section">
+    <p class="section-eyebrow">Design decision</p>
+    <h2 class="section-headline">
+      The constraint made it <em>better</em> than the original.
+    </h2>
+    <p class="body-text">
+      The desktop LMP Contour Map showed every hub label floating over the territory at once — workable on a large monitor, unreadable on a phone. Shrinking it wasn't an option. So the map stayed clean, and a user's favorited hubs moved to a persistent bottom card with 24-hour sparklines.
+    </p>
+    <p class="body-text" style="margin-top: 16px;">
+      The desktop version didn't have sparklines at all. Working within the limits of mobile forced a structural change that added information the original never had.
+    </p>
+
+    <div class="map-compare">
+      <div class="map-compare-item">
+        <p class="map-compare-label">Web — original</p>
+        <div class="browser-chrome">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+              <div class="browser-dot"></div>
+            </div>
+            <div class="browser-url">misoenergy.org</div>
+          </div>
+          <img src="/assets/miso-lmp-original.png" alt="MISO LMP Contour Map on the web showing hub labels overlaid on territory" />
         </div>
-        <div class="constraint-item">
-          <p class="constraint-label">Dual audiences</p>
-          <p class="constraint-text">Transmission operators and market participants have different mental models for the same data. One display had to serve both without becoming a menu of settings.</p>
+        <p class="map-compare-note">All hub labels visible at once. Designed for a large monitor. No mobile version existed.</p>
+      </div>
+      <div class="map-compare-item">
+        <p class="map-compare-label">Mobile — redesigned</p>
+        <div class="map-compare-img">
+          <img src="/assets/miso-lmp.png" alt="MISO LMP Contour Map on mobile with clean map and hub price cards below" />
         </div>
-        <div class="constraint-item">
-          <p class="constraint-label">Regulatory vocabulary</p>
-          <p class="constraint-text">LMP, ACE, ancillary markets: terms the users know cold. The app had to use the right language without explanation, not consumer-friendly softening.</p>
-        </div>
+        <p class="map-compare-note">Favorited hubs surface below the map as cards with 24-hour sparklines. The map stays readable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen showcase -->
+  <section class="cs-section">
+    <p class="section-eyebrow">The app</p>
+    <h2 class="section-headline">
+      Dense data. <em>Six inches</em> to work with.
+    </h2>
+
+    <div class="phone-grid">
+      <div class="phone-frame">
+        <img src="/assets/miso-my-dashboard.png" alt="MISO Mobile My Dashboard screen" />
+        <p class="phone-caption">My Dashboard — personalized real-time view</p>
+      </div>
+      <div class="phone-frame">
+        <img src="/assets/miso-grid-status.png" alt="MISO Mobile Grid Status screen with gauge" />
+        <p class="phone-caption">Grid Status — immediate at-a-glance condition</p>
+      </div>
+      <div class="phone-frame">
+        <img src="/assets/miso-notifications.png" alt="MISO Mobile News and Notifications screen" />
+        <p class="phone-caption">Notifications — real-time operations alerts by type</p>
       </div>
     </div>
   </section>
 
   <!-- Design decisions -->
   <section class="cs-section">
-    <p class="section-eyebrow">Design decisions</p>
-    <h2 class="section-headline">
-      What I chose and why.
-    </h2>
+    <p class="section-eyebrow">What I paid attention to</p>
+    <h2 class="section-headline">How you work <em>within</em> a system.</h2>
 
     <div class="decision-list">
       <div class="decision-item">
-        <p class="decision-title">Dark UI for the <em>data</em>, not the aesthetic</p>
-        <p class="decision-body">Dark backgrounds improve contrast for chart data in variable lighting conditions. Control room environments and trading floors aren't always brightly lit, and glare on screens is a real operational issue. The dark theme was a functional call.</p>
+        <p class="decision-title">Keep the vocabulary <em>intact</em></p>
+        <p class="decision-body">LMP, ACE, ARR/FTR, LZN — the app uses the terms its users already know. There was no impulse to simplify the language for a general audience. Changing established terminology in a professional tool doesn't feel friendlier; it just creates confusion and erodes trust.</p>
       </div>
       <div class="decision-item">
-        <p class="decision-title">Consistent chart geometry across <em>every</em> view</p>
-        <p class="decision-body">Same axis conventions, same color encoding, same scale behavior across all screens. When a user scans between generation fuel mix and LMP pricing, visual consistency reduces the cognitive load of re-orienting. They're reading data, not learning a new chart each time.</p>
+        <p class="decision-title">Extend the brand, <em>don't replace it</em></p>
+        <p class="decision-body">MISO had an established visual identity built up over years. The app needed to feel native to that system — not like a redesign layered on top of it. Modernizing the brand meant refining what was already there, not introducing a new aesthetic that the desktop tools wouldn't match.</p>
       </div>
       <div class="decision-item">
-        <p class="decision-title">No hiding the <em>density</em></p>
-        <p class="decision-body">The instinct with dense B2B data is to progressively disclose, hide behind toggles, simplify to summary views. That's the wrong call here. These users are professionals who came for the data. Hiding it wastes their time. The job was to organize it, not reduce it.</p>
+        <p class="decision-title">Personalization that <em>follows the data</em></p>
+        <p class="decision-body">The hubs you star in Dashboard Settings appear as starred markers on the LMP Map. Notification preferences carry through to the notifications screen. The configurability isn't a settings page bolted on — it threads through the whole app, because that's how the underlying data model works.</p>
       </div>
       <div class="decision-item">
-        <p class="decision-title">Real content from day <em>one</em></p>
-        <p class="decision-body">I used Claude to generate realistic data ranges for every chart type before any layout was finalized. LMP values with realistic variance across nodes. Generation fuel mix percentages that actually summed to 100. ACE values that reflected typical operating ranges. Lorem ipsum doesn't break mobile charts. Real numbers do.</p>
+        <p class="decision-title">Dark mode as <em>operational context</em></p>
+        <p class="decision-body">Control room environments, field conditions, early-morning shift checks — these are real use contexts for this tool. Dark mode wasn't added as a preference toggle. It was treated as a legitimate part of how the app gets used and designed in from the beginning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcome -->
+  <section class="cs-section">
+    <p class="section-eyebrow">Outcome</p>
+    <h2 class="section-headline">5 stars. Then they asked us back for <em>the website</em>.</h2>
+    <p class="body-text">
+      MISO Mobile launched to a 5.0 rating on the App Store. The app continues to ship new features — GI Interactive Queue, Carbon Emission Mix, Dashboard LMP Hubs — as the engagement deepened. Working within the existing system so carefully is what made the follow-on possible: MISO brought Crafted back to redesign misoenergy.org.
+    </p>
+    <div class="outcome-strip">
+      <div class="outcome-item">
+        <p class="outcome-number">5.0</p>
+        <p class="outcome-label">App Store rating</p>
+      </div>
+      <div class="outcome-item">
+        <p class="outcome-number">→</p>
+        <p class="outcome-label">Led to the misoenergy.org redesign</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="contact">
-    <div class="contact-left">
+    <div>
       <p class="contact-eyebrow">Get in touch</p>
       <h2 class="contact-headline">
         Got something <em>tangled</em>?<br>That's my favorite kind.
